@@ -1,1 +1,108 @@
-someshit
+:root {
+	--green: #e1eedd;
+	--cream: #fefbe9;
+	--orange: #f0a04b;
+	--yellow: #f6c453;
+	--black: #183a1d;
+	--title-font: 'Azeret Mono', monospace;
+	--content-font: 'Roboto', sans-serif;
+	--extra-font: 'Cormorant Garamond', serif;
+}
+
+/*
+======================================
+*/
+
+body {
+	background-color: var(--cream);
+	font-size: 16px;
+	color: var(--black);
+	width: 60vw;
+	margin: 0 auto;
+    padding: 10vw 0;
+}	
+.intro p, .history p, .bakery_intro p {
+	font-size: 1.2em;
+	font-family: var(--content-font);
+	line-height: 2;
+    margin-bottom: 4vw;
+}
+.bakery div dt {
+    font-size: 1em;
+	font-family: var(--title-font);
+    font-style: italic;
+	font-weight: bold;
+    margin: 1vw 0;
+}
+.bakery div dd{
+    font-size: 1em;
+	font-family: var(--content-font);
+	line-height: 1.5;
+}
+a {
+    font-weight: bold;
+    color: var(--orange);
+    text-decoration: none;
+    border-bottom: solid 2px var(--orange);
+}
+a::after{
+    content: " ↗";
+}
+a:hover{
+    color: var(--yellow);
+    border-bottom: solid 2px var(--yellow);
+}
+h1 {
+    font-family: var(--title-font);
+	font-size: 2.2em;
+	margin-bottom: 4vw;
+    font-weight: bold;
+	line-height:1.5;
+    text-shadow: 4px 4px var(--green);
+}
+h2 {
+	font-size: 1.5em;
+	font-family: var(--title-font);
+	font-weight: bold;
+	margin-bottom: 2vw;
+    text-shadow: 2px 2px var(--green);
+}
+h3{
+	font-size: 1.3em;
+	font-family: var(--title-font);
+	font-weight: bold;
+	margin-bottom: 1vw;
+}
+
+/*
+======================================
+*/
+
+.bakery {
+    width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.bakery div{
+	flex:30%;
+    border-radius: 10px;
+    background-color: var(--green);
+    padding: 2vw;
+    margin-bottom: 1vw;
+}
+.bakery_info2, .bakery_info4{
+    margin-left: 1vw;
+}
+@media screen and (max-width: 1000px) {
+	.bakery {
+	  flex-direction: column;
+	}
+    .bakery_info2, .bakery_info4{
+        margin-left: 0;
+    }
+	body {
+		width: 80vw;
+	}
+}
