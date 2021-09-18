@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edmonton-cupcake-bakery.netlify.app/sitemap.xml
