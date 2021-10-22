@@ -19,20 +19,21 @@ body {
 	color: var(--black);
 	width: 60vw;
 	margin: 0 auto;
-    padding: 10vw 0;
+    padding: 5vw 0;
 }	
 .intro p, .history p, .bakery_intro p {
 	font-size: 1.2em;
 	font-family: var(--content-font);
 	line-height: 2;
-    margin-bottom: 4vw;
+    margin-bottom: 2vw;
 }
 .bakery div dt {
     font-size: 1em;
 	font-family: var(--title-font);
     font-style: italic;
 	font-weight: bold;
-    margin: 1vw 0;
+    margin-top: 1vw;
+	margin-bottom: 0.5vw;
 }
 .bakery div dd{
     font-size: 1em;
@@ -63,6 +64,7 @@ h2 {
 	font-size: 1.5em;
 	font-family: var(--title-font);
 	font-weight: bold;
+	padding-top: 2vw;
 	margin-bottom: 2vw;
     text-shadow: 2px 2px var(--green);
 }
@@ -77,17 +79,14 @@ h3{
 ======================================
 */
 
-.bakery_info1, .bakery_info2, .bakery_info3, .bakery_info4{
+.bakery_info{
     border-radius: 10px;
     background-color: var(--green);
     padding: 2vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
+	box-shadow: 5px 5px var(--yellow);
 }
-@media screen and (max-width: 1000px) {
-	body {
-		width: 80vw;
-	}
-}
+
 /*
 ======================================
 */
@@ -101,10 +100,9 @@ header {
     justify-content: center;
 	margin-bottom: 4vw;
 }
-.bakery_image{
+figure{
 	position: relative;
-	margin: 0;
-	padding-left: 0;
+	height: 100%;
 }
 .credit {
 	line-height: 0.5;
@@ -122,4 +120,25 @@ img{
 	width:100%;
 	max-width: 480px;
 	height: inherit;
+	border-radius: 5px;
+	box-shadow: 5px 5px var(--yellow);
+}
+.bakery_detail{
+	display: flex;
+}
+dl {
+	margin-left: 2vw;
+	max-width: 400px;
+}
+@media screen and (max-width: 1000px) {
+	body {
+		width: 80vw;
+	}
+	.bakery_detail{
+		flex-direction: column;
+	}
+	dl {
+		margin-left: 0;
+		margin-top: 2vw;
+	}
 }
