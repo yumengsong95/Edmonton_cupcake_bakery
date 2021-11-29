@@ -21,7 +21,7 @@ body {
 	margin: 0 auto;
     padding: 5vw 0;
 }	
-.intro p, .history p, .bakery_intro p {
+.intro p, .history p, .bakery_intro p, .desc, .news p {
 	font-size: 1.2em;
 	font-family: var(--content-font);
 	line-height: 2;
@@ -98,7 +98,7 @@ header {
 	display:flex;
     align-items: center;
     justify-content: center;
-	margin-bottom: 4vw;
+	margin-bottom: 2vw;
 }
 figure{
 	position: relative;
@@ -109,6 +109,18 @@ figure{
 	font-size: 1em;
 	position: absolute;
 	bottom: 0.5em;
+	left: 0.5em;
+	font-style: italic;
+	font-weight: bold;
+	color: var(--green);
+	font-family: var(--extra-font);
+	text-shadow: 1px 1px var(--black);
+}
+.credit_new {
+	line-height: 0.5;
+	font-size: 1em;
+	position: absolute;
+	top: 0.5em;
 	left: 0.5em;
 	font-style: italic;
 	font-weight: bold;
@@ -141,4 +153,61 @@ dl {
 		margin-left: 0;
 		margin-top: 2vw;
 	}
+	
+	
+}
+@media screen and (max-width: 1350px){
+	.new_content{
+		flex-direction: column;
+	}
+}
+@media screen and (min-width: 1350px) {
+	.new_content figure{
+		width: 32%;
+	}
+}
+.new{
+	margin-bottom: 2vw;
+}
+.new_content{
+	display: flex;
+	justify-content: space-between;
+}
+
+figure{display:table}
+.desc{display:table-caption;caption-side:bottom}
+nav{
+	margin-bottom: 2vw;
+}
+nav a{
+	color: var(--cream);
+	padding: 0.6vw 1vw;
+	border: none;
+	border-radius: 5px;
+	margin-right: 1vw;
+	background-color: var(--orange);
+	font-size: 1.2em;
+	font-family: var(--title-font);
+}
+nav a::after{
+    content: none;
+	
+}
+nav a:hover{
+	color: var(--cream);
+	border: none;
+	background-color: var(--yellow);
+}
+
+.quote{
+	background-color: var(--green);
+	padding: 2vw;
+	border-radius: 10px;
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 2vw;
+}
+.quote p {
+	margin: 0;
+	font-style: italic;
 }
