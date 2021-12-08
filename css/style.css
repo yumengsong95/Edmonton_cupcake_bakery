@@ -99,6 +99,7 @@ header {
     align-items: center;
     justify-content: center;
 	margin-bottom: 2vw;
+	border-radius:  10px;
 }
 figure{
 	position: relative;
